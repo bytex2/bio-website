@@ -1,0 +1,116 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #FAF3DD;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header {
+  background-color: #4A7C59;
+  padding: 5px 0;
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 7px;
+}
+
+nav {
+  padding: 5px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+  position: relative;
+  display: flex;
+  align-items: center; /* Center the navbar item vertically */
+  justify-content: center; /* Center the navbar item horizontally */
+}
+
+nav a {
+  color: #FAF3DD;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #8FC0A9;
+  text-decoration: none;
+}
+
+nav li:hover::after {
+  transform: scaleX(1);
+}
+
+nav li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 15px;
+  padding: 0;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #C8D5B9;
+  padding: 0;
+  height: 200px; /* Set a fixed height for the grid item */
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%; /* Set the image height to 100% */
+  display: block;
+  object-fit: cover; /* Make sure the image covers the entire grid item */
+  transition: transform 0.3s ease;
+  opacity: 0.9;
+}
+
+
+.grid-item:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.grid-item:hover ~ .grid-item img {
+  opacity: 0.4; /* Reduce the opacity of other images when one is hovered */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.footer-content {
+  background-color: #757a7a;
+  color: #FAF3DD;
+  text-align: center;
+  padding: 1rem 0;
+}
